@@ -361,7 +361,7 @@ input, select, textarea {
 				}
 
 					form > .fields > .field.half {
-						width: calc(100% - 1.5rem);
+						width: calc(50% - 0.75rem);
 					}
 
 					form > .fields > .field.third {
@@ -389,6 +389,8 @@ input, select, textarea {
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
+	input[type="date"],
+	input[type="number"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -414,6 +416,8 @@ input, select, textarea {
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
+		input[type="date"],
+		input[type="number"],
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -423,6 +427,8 @@ input, select, textarea {
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
+		input[type="date"],
+		input[type="number"],
 		select:focus,
 		textarea:focus {
 			background: rgba(255, 255, 255, 0.075);
@@ -456,6 +462,8 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
+	input[type="number"],
 	select {
 		height: 2.75rem;
 	}
