@@ -73,135 +73,119 @@
                 </article>
 
                 <!-- Sales Entry -->
-                <article id="salesentry">
-                    <h3 class="major">Sales Entry</h3>
-                    <form method="post" action="#">
-                        <h4 class="major">Customer Details</h4>
-                        <div class="fields">
-                            <div class="field">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name"/>
-                            </div>
-                            <div class="field">
-                                <label for="phone">Contact</label>
-                                <input type="text" name="email" id="email"/>
-                            </div>
-                            <div class="field">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email"/>
-                            </div>
-                            <div class="field">
-                                <label for="address">Address</label>
-                                <input type="text" name="email" id="email"/>
-                            </div>
-                        </div>
+                <article id="salesmaster">
+                        <h3 class="major">Sales Master</h3>
+                        <section>
+                           <blockquote>
+                             <ul class="alt">
+                                 <li><span class="icon fa-calendar-check-o"> 05 Mar 2019</span>
+                                    &nbsp;
+                                    <span class="icon fa-hashtag"> Bill No. 000101</span></li>
+                                 <li><span class="icon fa-user-circle-o"> Albus Dumbledore</span></li>
+                                 <li><span class="icon fa-leaf"> Jhonny with Haworthia</span></li>
+                                 <li><span class="icon fa-money"> ₹650</span></li>
+                             </ul>
+                           </blockquote>
+                           <blockquote>
+                             <ul class="alt">
+                                 <li><span class="icon fa-calendar-check-o"> 06 Mar 2019</span>
+                                    &nbsp;
+                                    <span class="icon fa-hashtag"> Bill No. 000102</span></li>
+                                 <li><span class="icon fa-user-circle-o"> Severus Snape</span></li>
+                                 <li><span class="icon fa-leaf"> Lilly with Zebra</span></li>
+                                 <li><span class="icon fa-money"> ₹699</span></li>
+                             </ul>
+                           </blockquote>
+                        </section>
+                     </article>
 
-                        <h4 class="major">Product Details</h4>
-                        <div class="fields">
-                            <div class="field">
-                                <label for="name">Description</label>
-                                <input type="text" name="desc" id="name"/>
+                 <!-- Sales Entry -->
+                 <article id="salesentry">
+                        <h3 class="major">Sales Entry</h3>
+                        <form method="post" action="#">
+                            <h4 class="major">Customer Details</h4>
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name"/>
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Contact</label>
+                                    <input type="text" name="email" id="email"/>
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email"/>
+                                </div>
+                                <div class="field">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="email" id="email"/>
+                                </div>
                             </div>
-                            <div class="field">
-                                <label for="phone">Quantity</label>
-                                <input type="number" name="quantity" id="quantity"/>
+    
+                            <h4 class="major">Product Details</h4>
+                            <div class="fields">
+                                <div class="field">
+                                    <label for="name">Description</label>
+                                    <input type="text" name="desc" id="name"/>
+                                </div>
+                                <div class="field">
+                                    <label for="phone">Quantity</label>
+                                    <input type="number" name="quantity" id="quantity"/>
+                                </div>
+                                <div class="field half">
+                                    <label for="phone">Price</label>
+                                    <input type="text" name="price" id="price"/>
+                                </div>
+                                <div class="field half">
+                                    <label for="name">Discount</label>
+                                    <input type="text" name="discount" id="discount"/>
+                                </div>
                             </div>
-                            <div class="field half">
-                                <label for="phone">Price</label>
-                                <input type="text" name="price" id="price"/>
+    
+                            <h4 class="major">Other Details</h4>
+                            <div class="fields">
+                                <div class="field">
+                                    <input type="checkbox" id="delivery" name="delivery" checked="checked">
+                                    <label for="delivery">Delivery</label>
+                                </div>
+                                <div class="field half">
+                                    <label for="phone">Date</label>
+                                    <input type="date" name="date" id="dateDefault"/>
+                                </div>
+                                <div class="field half">
+                                    <label for="phone">Payment Mode</label>
+                                    <select name="enteredby" id="enteredby">
+                                        <option value="">-</option>
+                                        <option value="1">GPay / UPI</option>
+                                        <option value="1">PayTM</option>
+                                        <option value="1">Cash</option>
+                                        <option value="1">Bank Transfer</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="enteredby">Entered by</label>
+                                    <select name="enteredby" id="enteredby">
+                                        <option value="">-</option>
+                                        <option value="1">Dishika</option>
+                                        <option value="1">Shalaka</option>
+                                        <option value="1">Rohan</option>
+                                        <option value="1">Ritesh</option>
+                                        <option value="1">Sapnil</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="message">Additional Notes</label>
+                                    <textarea name="notes" id="notes" rows="3"></textarea>
+                                </div>
                             </div>
-                            <div class="field half">
-                                <label for="name">Discount</label>
-                                <input type="text" name="discount" id="discount"/>
-                            </div>
-                        </div>
-
-                        <h4 class="major">Other Details</h4>
-                        <div class="fields">
-                            <div class="field">
-                                <input type="checkbox" id="delivery" name="delivery" checked="checked">
-                                <label for="delivery">Delivery</label>
-                            </div>
-                            <div class="field half">
-                                <label for="phone">Date</label>
-                                <input type="date" name="date" id="dateDefault"/>
-                            </div>
-                            <div class="field half">
-                                <label for="phone">Payment Mode</label>
-                                <select name="enteredby" id="enteredby">
-                                    <option value="">-</option>
-                                    <option value="1">GPay / UPI</option>
-                                    <option value="1">PayTM</option>
-                                    <option value="1">Cash</option>
-                                    <option value="1">Bank Transfer</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="enteredby">Entered by</label>
-                                <select name="enteredby" id="enteredby">
-                                    <option value="">-</option>
-                                    <option value="1">Dishika</option>
-                                    <option value="1">Shalaka</option>
-                                    <option value="1">Rohan</option>
-                                    <option value="1">Ritesh</option>
-                                    <option value="1">Sapnil</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="message">Additional Notes</label>
-                                <textarea name="notes" id="notes" rows="3"></textarea>
-                            </div>
-                        </div>
-
-                        <ul class="actions">
-                            <li><input type="submit" value="Submit" class="primary"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </article>
-
-                <!-- Contact -->
-                <article id="contact">
-                    <h2 class="major">Contact</h2>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name"/>
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email"/>
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="4"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                    <ul class="icons">
-                        <li>
-                            <a href="#" class="icon fa-twitter">
-                                <span class="label">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="icon fa-facebook">
-                                <span class="label">Facebook</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="icon fa-instagram">
-                                <span class="label">Instagram</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="icon fa-github">
-                                <span class="label">GitHub</span></a>
-                        </li>
-                    </ul>
-                </article>
+    
+                            <ul class="actions">
+                                <li><input type="submit" value="Submit" class="primary"/></li>
+                                <li><input type="reset" value="Reset"/></li>
+                            </ul>
+                        </form>
+                    </article>
 
                 <!-- Elements -->
                 <article id="elements">
