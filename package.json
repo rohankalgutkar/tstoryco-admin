@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/rohankalgutkar/tstoryco-admin#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "env-cmd": "^8.0.2",
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.18",
+    "nodemon": "^1.18.10",
     "path": "^0.12.7"
   }
 }

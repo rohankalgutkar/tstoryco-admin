@@ -38,7 +38,7 @@
                         <li>
                             <a href="#salesmaster">View Sales</a>
                         </li>
-                        <!-- <li> <a href="#contact">Contact</a> </li> <li> <a
+                        <!-- <li> <a href="#success">Success</a> </li> <li> <a
                         href="#elements">Elements</a> </li> -->
                     </ul>
                 </nav>
@@ -102,44 +102,52 @@
                  <!-- Sales Entry -->
                  <article id="salesentry">
                         <h3 class="major">Sales Entry</h3>
-                        <form method="post" action="#">
+                        <form method="post" action="/salesentry">
                             <h4 class="major">Customer Details</h4>
                             <div class="fields">
                                 <div class="field">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name"/>
+                                    <label for="cust_name">Name</label>
+                                    <input type="text" name="cust_name" id="cust_name"/>
                                 </div>
                                 <div class="field">
-                                    <label for="phone">Contact</label>
-                                    <input type="text" name="email" id="email"/>
+                                    <label for="cust_phone">Contact</label>
+                                    <input type="text" name="cust_phone" id="cust_phone"/>
                                 </div>
                                 <div class="field">
-                                    <label for="email">Email</label>
-                                    <input type="text" name="email" id="email"/>
+                                    <label for="cust_email">Email</label>
+                                    <input type="text" name="cust_email" id="cust_email"/>
                                 </div>
                                 <div class="field">
-                                    <label for="address">Address</label>
-                                    <input type="text" name="email" id="email"/>
+                                    <label for="cust_address">Address</label>
+                                    <input type="text" name="cust_address" id="cust_address"/>
                                 </div>
                             </div>
     
                             <h4 class="major">Product Details</h4>
                             <div class="fields">
                                 <div class="field">
-                                    <label for="name">Description</label>
-                                    <input type="text" name="desc" id="name"/>
+                                    <label for="prod_name">Description</label>
+                                    <input type="text" name="prod_name" id="prod_name"/>
+                                </div>
+                                <div class="field half">
+                                        <input type="checkbox" id="prod_face" name="prod_face" checked="checked">
+                                        <label for="prod_face">Face</label>
+                                </div>
+                                <div class="field half">
+                                        <input type="checkbox" id="prod_quote" name="prod_quote">
+                                        <label for="prod_quote">Quote</label>
                                 </div>
                                 <div class="field">
-                                    <label for="phone">Quantity</label>
-                                    <input type="number" name="quantity" id="quantity"/>
+                                    <label for="prod_qty">Quantity</label>
+                                    <input type="number" name="prod_qty" id="prod_qty"/>
                                 </div>
                                 <div class="field half">
-                                    <label for="phone">Price</label>
-                                    <input type="text" name="price" id="price"/>
+                                    <label for="prod_price">Price</label>
+                                    <input type="text" name="prod_price" id="prod_price"/>
                                 </div>
                                 <div class="field half">
-                                    <label for="name">Discount</label>
-                                    <input type="text" name="discount" id="discount"/>
+                                    <label for="prod_disc">Discount</label>
+                                    <input type="text" name="prod_disc" id="prod_disc"/>
                                 </div>
                             </div>
     
@@ -150,32 +158,32 @@
                                     <label for="delivery">Delivery</label>
                                 </div>
                                 <div class="field half">
-                                    <label for="phone">Date</label>
+                                    <label for="date">Date</label>
                                     <input type="date" name="date" id="dateDefault"/>
                                 </div>
                                 <div class="field half">
-                                    <label for="phone">Payment Mode</label>
-                                    <select name="enteredby" id="enteredby">
+                                    <label for="payment_mode">Payment Mode</label>
+                                    <select name="payment_mode" id="payment_mode">
                                         <option value="">-</option>
-                                        <option value="1">GPay / UPI</option>
-                                        <option value="1">PayTM</option>
-                                        <option value="1">Cash</option>
-                                        <option value="1">Bank Transfer</option>
+                                        <option value="gpay_or_upi">GPay / UPI</option>
+                                        <option value="paytm">PayTM</option>
+                                        <option value="cash">Cash</option>
+                                        <option value="bank_transfer">Bank Transfer</option>
                                     </select>
                                 </div>
                                 <div class="field">
-                                    <label for="enteredby">Entered by</label>
-                                    <select name="enteredby" id="enteredby">
+                                    <label for="entered_by">Entered by</label>
+                                    <select name="entered_by" id="entered_by">
                                         <option value="">-</option>
-                                        <option value="1">Dishika</option>
-                                        <option value="1">Shalaka</option>
-                                        <option value="1">Rohan</option>
-                                        <option value="1">Ritesh</option>
-                                        <option value="1">Sapnil</option>
+                                        <option value="Dishika">Dishika</option>
+                                        <option value="Shalaka">Shalaka</option>
+                                        <option value="Rohan">Rohan</option>
+                                        <option value="Ritesh">Ritesh</option>
+                                        <option value="Sapnil">Sapnil</option>
                                     </select>
                                 </div>
                                 <div class="field">
-                                    <label for="message">Additional Notes</label>
+                                    <label for="notes">Additional Notes</label>
                                     <textarea name="notes" id="notes" rows="3"></textarea>
                                 </div>
                             </div>
@@ -185,6 +193,12 @@
                                 <li><input type="reset" value="Reset"/></li>
                             </ul>
                         </form>
+                    </article>
+
+                    <!-- Success -->
+                <article id="success">
+                        <h4 class="major">Sales Entry Added</h4>
+                        <a href="#" class="button icon fa-check" style="margin-bottom: 20px">Okay</a>
                     </article>
 
                 <!-- Elements -->
