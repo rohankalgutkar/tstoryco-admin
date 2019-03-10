@@ -1630,3 +1630,8 @@ input, select, textarea {
 		right: 7%;
 		display: inline-block
 	}
+	.stick-right-icon {
+		position: absolute;
+		right: 20%;
+		display: inline-block
+	}

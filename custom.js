@@ -55,18 +55,15 @@ var generateSalesOutput = function (data) {
         var objRecord = data[i];
         var date = this.formatDate(objRecord.date);
 
-        // Customer Info
-        
-
         // Payment Info
         var isDelivered = "";
         if (objRecord.delivery) 
-            isDelivered = '&nbsp;&nbsp;&nbsp; <span class="tbsp fas fa-truck"></span>'
+            isDelivered = '&nbsp;&nbsp;&nbsp; <span class="fas fa-truck"></span>&nbsp;'
 
         var discount = "";
-        if (objRecord.prod_disc) 
-            discount = '&nbsp; <span class="fas fa-angle-double-down"></span>&nbsp;₹' +
-                    objRecord.prod_disc
+        if (objRecord.prod_disc) {
+            discount = '&nbsp; <span class="fas fa-angle-double-down"></span>&nbsp;₹' + objRecord.prod_disc
+        }
 
         var paymentMode = objRecord.payment_mode,
             fa;
@@ -86,13 +83,15 @@ var generateSalesOutput = function (data) {
         }
         var paymentMethod = '<div class="stick-right"><span class="' + fa + '"></span></div>'
 
+        // output = output + '<blockquote> <ul class="alt"> <li> <span class="fas fa-user-circle"></span>&nbsp;'
+        //                 + objRecord.cust_name + '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span> &nbsp;' + date +'</div></li></li><li> <span class="fas fa-tree"></span> &nbsp;' 
+        //         + objRecord.prod_name + '</li><li> <span class="fas fa-money-check-alt"></span> &nbsp; ₹' 
+        //         + objRecord.grand_total + ' &nbsp;<span class="fas fa-tag"></span> &nbsp;₹' 
+        //         + objRecord.prod_price + discount + isDelivered + paymentMethod 
+        //         + '</li></ul> </blockquote>'
         output = output + '<blockquote> <ul class="alt"> <li> <span class="fas fa-user-circle"></span>&nbsp;'
-                        + objRecord.cust_name + '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span> &nbsp;' 
-                        + date +'</div>'+ '</li>' 
-                + '</li><li> <span class="fas fa-tree"></span> &nbsp;' 
-                + objRecord.prod_name + '</li><li> <span class="fas fa-money-check-alt"></span> &nbsp; ₹' 
-                + objRecord.grand_total + ' &nbsp;<span class="fas fa-tag"></span> &nbsp;₹' 
-                + objRecord.prod_price + discount + isDelivered + paymentMethod 
+                        + objRecord.cust_name + '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span> &nbsp;' + date +'</div></li></li><li> <span class="fas fa-tree"></span> &nbsp;' + objRecord.prod_name + '</li><li><span class="fas fa-tag"></span> &nbsp;₹' + objRecord.prod_price + discount + isDelivered
+                        + '<div class="stick-right-icon"><span class="fas fa-money-check-alt"></span> &nbsp; ₹' + objRecord.grand_total +'</div>'+ paymentMethod 
                 + '</li></ul> </blockquote>'
     }
 
