@@ -365,7 +365,7 @@ input, select, textarea {
 					}
 
 					form > .fields > .field.third {
-						width: calc(100% - 1.5rem);
+						width: calc(100%/3 - 0.5rem);
 					}
 
 					form > .fields > .field.quarter {
@@ -427,8 +427,8 @@ input, select, textarea {
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
-		input[type="date"],
-		input[type="number"],
+		input[type="date"]:focus,
+		input[type="number"]:focus,
 		select:focus,
 		textarea:focus {
 			background: rgba(255, 255, 255, 0.075);

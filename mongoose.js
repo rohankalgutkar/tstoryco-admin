@@ -21,6 +21,7 @@ const Sale = mongoose.model('Sale', {
     prod_price: String,
     prod_disc: String,
     delivery: Boolean,
+    order_status: String,
     date: Date,
     payment_mode: String,
     entered_by: String,

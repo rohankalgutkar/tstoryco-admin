@@ -2,7 +2,8 @@ const mongoose = require('./mongoose.js')
 const _ = require('lodash')
 
 var preProcessSalesData = function (formData) {
-
+    console.log('Form input: ' + JSON.stringify(formData))
+    
     formData.prod_face = _.has(formData, 'prod_face')
     formData.prod_quote = _.has(formData, 'prod_quote')
     formData.delivery = _.has(formData, 'delivery')
