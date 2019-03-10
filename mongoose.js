@@ -20,7 +20,6 @@ const Sale = mongoose.model('Sale', {
     prod_qty: Number,
     prod_price: Number,
     prod_disc: Number,
-    prod_total_price: Number,
     grand_total: Number,
     delivery: Boolean,
     order_status: String,
