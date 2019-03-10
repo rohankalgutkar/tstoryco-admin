@@ -75,51 +75,6 @@
                 </article>
 
                 <!-- Sales Entry -->
-                <article id="salesmaster">
-                    <h3 class="major">Sales Master</h3>
-                    <section>
-                        <blockquote>
-                            <ul class="alt">
-                                <li>
-                                    <span class="icon fa-calendar-check-o">
-                                        05 Mar 2019</span>
-                                    &nbsp;
-                                    <span class="icon fa-hashtag">
-                                        Bill No. 000101</span></li>
-                                <li>
-                                    <span class="icon fa-user-circle-o">
-                                        Albus Dumbledore</span></li>
-                                <li>
-                                    <span class="icon fa-leaf">
-                                        Jhonny with Haworthia</span></li>
-                                <li>
-                                    <span class="icon fa-money">
-                                        ₹650</span></li>
-                            </ul>
-                        </blockquote>
-                        <blockquote>
-                            <ul class="alt">
-                                <li>
-                                    <span class="icon fa-calendar-check-o">
-                                        06 Mar 2019</span>
-                                    &nbsp;
-                                    <span class="icon fa-hashtag">
-                                        Bill No. 000102</span></li>
-                                <li>
-                                    <span class="icon fa-user-circle-o">
-                                        Severus Snape</span></li>
-                                <li>
-                                    <span class="icon fa-leaf">
-                                        Lilly with Zebra</span></li>
-                                <li>
-                                    <span class="icon fa-money">
-                                        ₹699</span></li>
-                            </ul>
-                        </blockquote>
-                    </section>
-                </article>
-
-                <!-- Sales Entry -->
                 <article id="salesentry">
                     <h3 class="major">Sales Entry</h3>
                     <form method="post" action="/salesentry">
@@ -221,6 +176,14 @@
                             <li><input type="reset" value="Reset"/></li>
                         </ul>
                     </form>
+                </article>
+
+                <!-- Sales Master -->
+                <article id="salesmaster">
+                    <h3 class="major">Sales Master</h3>
+                    <section>
+                    {{#blockquote data}}{{/blockquote}}
+                </section>
                 </article>
 
                 <!-- Success -->
