@@ -23,11 +23,11 @@ hbs.registerHelper('blockquote', function (data, options) {
       var date = customAPIs.formatDate(objRecord.date);
       var isDelivered = "";
       if(objRecord.delivery)
-        isDelivered = '&nbsp; <span class="tbsp icon fa-truck"></span>'
+        isDelivered = '&nbsp;&nbsp;&nbsp; <span class="tbsp icon fa-truck"></span>'
 
       var discount = 0;
       if(objRecord.prod_disc)
-        discount = '&nbsp; <span class="icon fa-angle-double-down"> ₹' + objRecord.prod_disc + '</span> &nbsp;&nbsp;'
+        discount = '&nbsp; <span class="icon fa-angle-double-down"> ₹' + objRecord.prod_disc + '</span>'
       
       var paymentMode = objRecord.payment_mode, fa;
       switch (paymentMode){
