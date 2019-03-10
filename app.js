@@ -19,15 +19,14 @@ hbs.registerHelper('blockquote', function (data, options) {
 });
 
 app.get('/', function (req, res) {
-    // var salesData = customAPIs.getAllSales(); console.log('In /, data is: ' +
-    // (salesData)) res.render('index', {   data: salesData });
 
     var salesMaster = mongoose.Sale;
     salesMaster.find({}).sort({date_added: -1}).exec((err, docs) => {
         if (err) {
             console.log('Unable to connect to the DB!')
         } else {
-            res.render('index', {data: docs});
+            res.render('index', {data: docs,
+              defaultDate: customAPIs.getTodaysDate()});
         }
     });
 });

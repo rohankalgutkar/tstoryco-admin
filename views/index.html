@@ -8,7 +8,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1, user-scalable=no"/>
         <link rel="stylesheet" href="assets/css/main.css"/>
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
     </head>
     <body class="is-preload">
@@ -19,7 +19,7 @@
             <!-- Header -->
             <header id="header">
                 <div class="logo">
-                    <span class="icon fa-code"></span>
+                    <span class="fas fa-user-astronaut"></span>
                 </div>
                 <div class="content">
                     <div class="inner">
@@ -37,7 +37,10 @@
                         <li>
                             <a href="#salesmaster">View Sales</a>
                         </li>
-                        <!-- <li>
+                        <!--<li>
+                            <a href="#openorders">Open Orders</a>
+                        </li>
+                         <li>
                             <a href="#success">Success</a>
                         </li> -->
                         <!-- <li>
@@ -87,11 +90,11 @@
                             </div>
                             <div class="field">
                                 <label for="cust_phone">Contact</label>
-                                <input type="text" name="cust_phone" id="cust_phone"/>
+                                <input type="number" name="cust_phone" id="cust_phone"/>
                             </div>
                             <div class="field">
                                 <label for="cust_email">Email</label>
-                                <input type="text" name="cust_email" id="cust_email"/>
+                                <input type="email" name="cust_email" id="cust_email"/>
                             </div>
                             <div class="field">
                                 <label for="cust_address">Address</label>
@@ -131,7 +134,7 @@
                         <div class="fields">
                         <div class="field half">
                                 <label for="date">Date</label>
-                                <input type="date" name="date" id="dateDefault"/>
+                                <input type="date" name="date" id="dateDefault" value="{{defaultDate}}"/>
                             </div>
                             <div class="field half" style="margin-top: 20px">
                                 <input type="checkbox" id="delivery" name="delivery" checked="checked">
@@ -187,10 +190,18 @@
                 </section>
                 </article>
 
+                <!-- Open Orders -->
+                <article id="openorders">
+                        <h3 class="major">Open Orders</h3>
+                        <section>
+                        
+                    </section>
+                    </article>
+
                 <!-- Success -->
                 <article id="success">
                     <h4 class="major">Sales Entry Added</h4>
-                    <a href="#" class="button icon fa-check" style="margin-bottom: 20px">Okay</a>
+                    <a href="#" class="button fas fa-check" style="margin-bottom: 20px">Okay</a>
                 </article>
 
                 <!-- Elements -->
@@ -268,19 +279,19 @@ print 'it took ' + i + ' iterations to sort the deck.';</code></pre>
                         <h4>Icons</h4>
                         <ul class="icons">
                             <li>
-                                <a href="#" class="icon fa-twitter">
+                                <a href="#" class="fas fa-twitter">
                                     <span class="label">Twitter</span></a>
                             </li>
                             <li>
-                                <a href="#" class="icon fa-facebook">
+                                <a href="#" class="fas fa-facebook">
                                     <span class="label">Facebook</span></a>
                             </li>
                             <li>
-                                <a href="#" class="icon fa-instagram">
+                                <a href="#" class="fas fa-instagram">
                                     <span class="label">Instagram</span></a>
                             </li>
                             <li>
-                                <a href="#" class="icon fa-github">
+                                <a href="#" class="fas fa-github">
                                     <span class="label">Github</span></a>
                             </li>
                         </ul>
@@ -421,10 +432,10 @@ print 'it took ' + i + ' iterations to sort the deck.';</code></pre>
                         </ul>
                         <ul class="actions">
                             <li>
-                                <a href="#" class="button primary icon fa-download">Icon</a>
+                                <a href="#" class="button primary fas fa-download">Icon</a>
                             </li>
                             <li>
-                                <a href="#" class="button icon fa-download">Icon</a>
+                                <a href="#" class="button fas fa-download">Icon</a>
                             </li>
                         </ul>
                         <ul class="actions">
@@ -519,30 +530,6 @@ print 'it took ' + i + ' iterations to sort the deck.';</code></pre>
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
-
-        <script>
-            function setInputDate(_id) {
-                var _dat = document.querySelector(_id);
-                var hoy = new Date(),
-                    d = hoy.getDate(),
-                    m = hoy.getMonth() + 1,
-                    y = hoy.getFullYear(),
-                    data;
-
-                if (d < 10) {
-                    d = "0" + d;
-                };
-                if (m < 10) {
-                    m = "0" + m;
-                };
-
-                data = y + "-" + m + "-" + d;
-                console.log(data);
-                _dat.value = data;
-            };
-
-            setInputDate("#dateDefault");
-        </script>
 
     </body>
 </html>
