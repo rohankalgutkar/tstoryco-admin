@@ -489,7 +489,7 @@ input, select, textarea {
 			color: #ffffff;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 			font-weight: 300;
 			margin: 0 0 0.5rem 0;
 			padding-left: 2.65rem;
@@ -501,9 +501,9 @@ input, select, textarea {
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
+				font-family: "Font Awesome 5 Free";
+				/* font-style: normal; */
+				font-weight: 400;
 				text-transform: none !important;
 			}
 
@@ -531,7 +531,8 @@ input, select, textarea {
 			background: #ffffff !important;
 			border-color: #ffffff !important;
 			color: #1b1f22;
-			content: '\f00c';
+			font-size: 0.9rem;
+			content: '\f058';
 		}
 
 		input[type="checkbox"]:focus + label:before,
@@ -984,7 +985,7 @@ input, select, textarea {
 		letter-spacing: 0.2rem;
 		line-height: 2.75rem;
 		outline: 0;
-		padding: 0 1.25rem 0 1.35rem;
+		padding: 1rem 1.25rem 0 1.35rem;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
