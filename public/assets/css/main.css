@@ -533,6 +533,7 @@ input, select, textarea {
 			color: #1b1f22;
 			font-size: 0.9rem;
 			content: '\f058';
+			padding-left: 0.18rem;
 		}
 
 		input[type="checkbox"]:focus + label:before,
@@ -985,11 +986,14 @@ input, select, textarea {
 		letter-spacing: 0.2rem;
 		line-height: 2.75rem;
 		outline: 0;
-		padding: 1rem 1.25rem 0 1.35rem;
+		padding: 0 1.25rem 0 1.35rem;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+	}
+	.button{
+		padding: 1rem 1.25rem 0 1.35rem !important;
 	}
 
 		input[type="submit"]:hover,
