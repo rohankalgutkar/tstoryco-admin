@@ -1,5 +1,6 @@
 const express = require('express');
-const path = require('path');
+const basicAuth = require('express-basic-auth')
+// const path = require('path');
 const bodyParser = require('body-parser');
 var customAPIs = require('./custom')
 // temp
@@ -8,6 +9,11 @@ const mongoose = require('./mongoose.js')
 const hbs = require('hbs');
 
 const app = express()
+app.use(basicAuth({
+  users: { 'admin': 'supersecret' },
+  challenge: true
+}))
+
 
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}));
