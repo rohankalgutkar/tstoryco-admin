@@ -91,7 +91,7 @@ var generateSalesOutput = function (data) {
         if (objRecord.notes != "")
             notes = '</li><li><span class="fas fa-sticky-note"></span>&nbsp; ' + objRecord.notes;
 
-        output = output + '<blockquote> <ul class="alt"> <li> <span class="fas fa-user-circle"></span>&nbsp;'
+        output = output + '<blockquote> <ul class="alt"> <li> <span class="fas fa-user-circle"></span>&nbsp; '
                         + objRecord.cust_name 
                         + '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span>&nbsp; ' + date +'</div></li></li><li> <span class="fas fa-tree"></span> &nbsp; ' + objRecord.prod_name + '</li><li><span class="fas fa-tag"></span>&nbsp; ₹' + objRecord.prod_price + discount + isDelivered
                         + '<div class="stick-right-icon"><span class="fas fa-money-check-alt"></span>&nbsp; ₹' + objRecord.grand_total +'</div>'+ paymentMethod 
