@@ -83,9 +83,11 @@ var generateSalesOutput = function (data) {
         }
         var paymentMethod = '<div class="stick-right"><span class="' + fa + '"></span></div>'
 
-        var isOpenOrder = "";
-        if (objRecord.order_status) 
-            isOpenOrder = '<span class="fas fa-sync"></span>&nbsp; Open'
+        var orderStatus = "";
+        if (objRecord.order_status == 'open') 
+            orderStatus = '<span class="fas fa-sync"></span>&nbsp; Open'
+        else if(objRecord.order_status == 'complete')
+            orderStatus = '<span class="fas fa-check-double"></span>&nbsp; Complete'
 
         var notes = "";
         if (objRecord.notes != "")
@@ -95,7 +97,7 @@ var generateSalesOutput = function (data) {
                         + objRecord.cust_name 
                         + '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span>&nbsp; ' + date +'</div></li></li><li> <span class="fas fa-tree"></span> &nbsp; ' + objRecord.prod_name + '</li><li><span class="fas fa-tag"></span>&nbsp; ₹' + objRecord.prod_price + discount + isDelivered
                         + '<div class="stick-right-icon"><span class="fas fa-money-check-alt"></span>&nbsp; ₹' + objRecord.grand_total +'</div>'+ paymentMethod 
-                        +'</li><li>' + isOpenOrder + notes
+                        +'</li><li>' + orderStatus + notes
                 + '</li></ul> </blockquote>'
     }
 
