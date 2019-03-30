@@ -37,7 +37,17 @@ app.get('/', function (req, res) {
     var salesData = customAPIs.getAllSales();
 
     salesData.then((salesData) => {
-
+        var cost = 0,
+            // earning = 0,
+            discount = 0;
+        _.each(salesData, (objSale) => {
+            cost = cost + objSale.prod_price;
+            // earning = earning + objSale.grand_total
+            discount = discount + objSale.prod_disc
+        });
+        cost = cost - discount;
+        console.log('Earning:' + cost);
+        console.log('discount:' + discount);
 
         res.render('index', {
             completeOrders: _.filter(salesData, function (o) {
@@ -46,7 +56,9 @@ app.get('/', function (req, res) {
             openOrders: _.filter(salesData, function (o) {
                 return o.order_status == 'open';
             }),
-            defaultDate
+            defaultDate,
+            cost,
+            discount
         });
     }).catch((e) => {
         console.log('Didnt work' + e);

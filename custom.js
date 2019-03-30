@@ -34,13 +34,10 @@ var insertSale = function (formData) {
 
 var getAllSales = function () {
     var salesMaster = mongoose.Sale;
-
     var salesDataPromise = salesMaster.find({}).sort({
         date_added: -1
     });
-
     return salesDataPromise;
-
 }
 
 var generateSalesOutput = function (data) {
