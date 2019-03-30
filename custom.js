@@ -34,22 +34,19 @@ var insertSale = function (formData) {
 
 var getAllSales = function () {
     var salesMaster = mongoose.Sale;
-    var salesData = [];
-    salesMaster.find({}, (err, docs) => {
-        if (err) {
-            console.log('Unable to connect to the DB!')
-        } else {
-            return docs;
-            // console.log('Fetched records: ' + docs);
-        }
+
+    var salesDataPromise = salesMaster.find({}).sort({
+        date_added: -1
     });
 
-    // return salesData;
+    return salesDataPromise;
+
 }
 
 var generateSalesOutput = function (data) {
     var output = "";
-    // console.log('Dataset length: ' + data.length)
+    console.log('Dataset: ' + data)
+    console.log('Dataset length: ' + data.length)
 
     for (var i = 0, l = data.length; i < l; i++) {
         var objRecord = data[i];
@@ -57,7 +54,7 @@ var generateSalesOutput = function (data) {
 
         // Payment Info
         var isDelivered = "";
-        if (objRecord.delivery) 
+        if (objRecord.delivery)
             isDelivered = '&nbsp;&nbsp;&nbsp; <span class="fas fa-truck"></span>&nbsp; '
 
         var discount = "";
@@ -84,23 +81,24 @@ var generateSalesOutput = function (data) {
         var paymentMethod = '<div class="stick-right"><span class="' + fa + '"></span></div>'
 
         var orderStatus = "";
-        if (objRecord.order_status == 'open') 
+        if (objRecord.order_status == 'open')
             orderStatus = '<span class="fas fa-sync"></span>&nbsp; Open'
-        else if(objRecord.order_status == 'complete')
+        else if (objRecord.order_status == 'complete')
             orderStatus = '<span class="fas fa-check-double"></span>&nbsp; Complete'
 
         var notes = "";
         if (objRecord.notes != "")
             notes = '</li><li><span class="fas fa-sticky-note"></span>&nbsp; ' + objRecord.notes;
 
-        output = output + '<blockquote> <ul class="alt"> <li> <span class="fas fa-user-circle"></span>&nbsp; '
-                        + objRecord.cust_name 
-                        + '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span>&nbsp; ' + date +'</div></li></li><li> <span class="fas fa-tree"></span> &nbsp; ' + objRecord.prod_name + '</li><li><span class="fas fa-tag"></span>&nbsp; ₹' + objRecord.prod_price + discount + isDelivered
-                        + '<div class="stick-right-icon"><span class="fas fa-money-check-alt"></span>&nbsp; ₹' + objRecord.grand_total +'</div>'+ paymentMethod 
-                        +'</li><li>' + orderStatus + notes
-                + '</li></ul> </blockquote>'
+        output = output + '<blockquote> <ul class="alt"> <li> <span class="fas fa-user-circle"></span>&nbsp; ' +
+            objRecord.cust_name +
+            '<div class="stick-right"><span class="tbspl fas fa-calendar-check"></span>&nbsp; ' + date + '</div></li></li><li> <span class="fas fa-tree"></span> &nbsp; ' + objRecord.prod_name + '</li><li><span class="fas fa-tag"></span>&nbsp; ₹' + objRecord.prod_price + discount + isDelivered +
+            '<div class="stick-right-icon"><span class="fas fa-money-check-alt"></span>&nbsp; ₹' + objRecord.grand_total + '</div>' + paymentMethod +
+            '</li><li>' + orderStatus + notes +
+            '</li></ul> </blockquote>'
     }
 
+    console.log('returning shiz' + output);
     return output
 }
 
@@ -143,7 +141,7 @@ var getTodaysDate = function () {
     };
 
     output = y + "-" + m + "-" + d;
-    
+
     return output;
 };
 

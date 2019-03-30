@@ -1,245 +1,247 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>thetstoryco | Admin</title>
-        <link rel="shortcut icon" href="images/fav.png">
-        <meta charset="utf-8"/>
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, user-scalable=no"/>
-        <link rel="stylesheet" href="assets/css/main.css"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
-    </head>
-    <body class="is-preload">
 
-        <!-- Wrapper -->
-        <div id="wrapper">
+<head>
+    <title>thetstoryco | Admin</title>
+    <link rel="shortcut icon" href="images/fav.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
 
-            <!-- Header -->
-            <header id="header">
-                <div class="logo">
-                    <span class="fas fa-user-astronaut"></span>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="fas fa-user-astronaut"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <!-- <h1>Dimension</h1> -->
+                    <img src="images/logo-white.png" height="75" />
+                    <p>Admin</p>
                 </div>
-                <div class="content">
-                    <div class="inner">
-                        <!-- <h1>Dimension</h1> -->
-                        <img src="images/logo-white.png" height="75"/>
-                        <p>Admin</p>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <!-- <li> <a href="#pricecheck">Price Check</a> </li> -->
-                        <li>
-                            <a href="#salesentry">Sales Entry</a>
-                        </li>
-                        <li>
-                            <a href="#salesmaster">View Sales</a>
-                        </li>
-                        <!--<li>
+            </div>
+            <nav>
+                <ul>
+                    <!-- <li> <a href="#pricecheck">Price Check</a> </li> -->
+                    <li>
+                        <a href="#salesentry">Sales Entry</a>
+                    </li>
+                    <li>
+                        <a href="#salesmaster">View Sales</a>
+                    </li>
+                    <!--<li>
                             <a href="#openorders">Open Orders</a>
                         </li>-->
-                         <!-- <li>
+                    <!-- <li>
                             <a href="#success">Success</a>
                         </li>  -->
-                        <!--<li>
+                    <!--<li>
                             <a href="#elements">Elements</a>
-                        </li>--> 
-                    </ul>
-                </nav>
-            </header>
+                        </li>-->
+                </ul>
+            </nav>
+        </header>
 
-            <!-- Main -->
-            <div id="main">
+        <!-- Main -->
+        <div id="main">
 
-                <!-- PriceCheck -->
-                <article id="pricecheck">
-                    <h3 class="major">Price Check</h3>
-                    <form method="post" action="#">
-                        <div class="fields">
-                            <div class="field half">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name"/>
-                            </div>
-                            <div class="field half">
-                                <label for="email">Email</label>
-                                <input type="text" name="email" id="email"/>
-                            </div>
-                            <div class="field">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" rows="4"></textarea>
-                            </div>
-                        </div>
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </article>
-
-                <!-- Sales Entry -->
-                <article id="salesentry">
-                    <h3 class="major">Sales Entry</h3>
-                    <form method="post" action="/salesentry">
-                        <h4 class="major">Customer Details</h4>
-                        <div class="fields">
-                            <div class="field">
-                                <label for="cust_name">Name</label>
-                                <input type="text" name="cust_name" id="cust_name"/>
-                            </div>
-                            <div class="field">
-                                <label for="cust_phone">Contact</label>
-                                <input type="number" name="cust_phone" id="cust_phone"/>
-                            </div>
-                            <div class="field">
-                                <label for="cust_email">Email</label>
-                                <input type="email" name="cust_email" id="cust_email"/>
-                            </div>
-                            <div class="field">
-                                <label for="cust_address">Address</label>
-                                <input type="text" name="cust_address" id="cust_address"/>
-                            </div>
-                        </div>
-
-                        <h4 class="major">Product Details</h4>
-                        <div class="fields">
-                            <div class="field">
-                                <label for="prod_name">Description</label>
-                                <input type="text" name="prod_name" id="prod_name"/>
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="prod_face" name="prod_face" checked="checked">
-                                <label for="prod_face">Face</label>
-                            </div>
-                            <div class="field half">
-                                <input type="checkbox" id="prod_quote" name="prod_quote">
-                                <label for="prod_quote">Quote</label>
-                            </div>
-                            <div class="field third">
-                                <label for="prod_qty">Quantity</label>
-                                <input type="number" name="prod_qty" id="prod_qty"/>
-                            </div>
-                            <div class="field third">
-                                <label for="prod_price">Price</label>
-                                <input type="number" name="prod_price" id="prod_price"/>
-                            </div>
-                            <div class="field third">
-                                <label for="prod_disc">Discount</label>
-                                <input type="number" name="prod_disc" id="prod_disc"/>
-                            </div>
-                        </div>
-
-                        <h4 class="major">Other Details</h4>
-                        <div class="fields">
+            <!-- PriceCheck -->
+            <article id="pricecheck">
+                <h3 class="major">Price Check</h3>
+                <form method="post" action="#">
+                    <div class="fields">
                         <div class="field half">
-                                <label for="date">Date</label>
-                                <input type="date" name="date" id="dateDefault" value="{{defaultDate}}"/>
-                            </div>
-                            <div class="field half" style="margin-top: 20px">
-                                <input type="checkbox" id="delivery" name="delivery" checked="checked">
-                                <label for="delivery">Delivery</label>
-                            </div>
-                            <div class="field half">
-                                <input type="radio" id="open_order" name="order_status" checked="checked" value="open">
-                                <label for="open_order">Open</label>
-                            </div>
-                            <div class="field half">
-                                <input type="radio" id="completed_order" name="order_status" value="complete">
-                                <label for="completed_order">Complete</label>
-                            </div>
-                            <div class="field half">
-                                <label for="payment_mode">Payment Mode</label>
-                                <select name="payment_mode" id="payment_mode">
-                                    <option value="">-</option>
-                                    <option value="gpay_or_upi">GPay / UPI</option>
-                                    <option value="paytm">PayTM</option>
-                                    <option value="cash">Cash</option>
-                                    <option value="bank_transfer">Bank Transfer</option>
-                                </select>
-                            </div>
-                            <div class="field half">
-                                <label for="entered_by">Entered by</label>
-                                <select name="entered_by" id="entered_by">
-                                    <option value="">-</option>
-                                    <option value="Dishika">Dishika</option>
-                                    <option value="Shalaka">Shalaka</option>
-                                    <option value="Rohan">Rohan</option>
-                                    <option value="Ritesh">Ritesh</option>
-                                    <option value="Sapnil">Sapnil</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label for="notes">Additional Notes</label>
-                                <textarea name="notes" id="notes" rows="3"></textarea>
-                            </div>
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" />
                         </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
+            </article>
 
-                        <ul class="actions">
-                            <li><input type="submit" value="Submit" class="primary"/></li>
-                            <li><input type="reset" value="Reset"/></li>
-                        </ul>
-                    </form>
-                </article>
+            <!-- Sales Entry -->
+            <article id="salesentry">
+                <h3 class="major">Sales Entry</h3>
+                <form method="post" action="/salesentry">
+                    <h4 class="major">Customer Details</h4>
+                    <div class="fields">
+                        <div class="field">
+                            <label for="cust_name">Name</label>
+                            <input type="text" name="cust_name" id="cust_name" />
+                        </div>
+                        <div class="field">
+                            <label for="cust_phone">Contact</label>
+                            <input type="number" name="cust_phone" id="cust_phone" />
+                        </div>
+                        <div class="field">
+                            <label for="cust_email">Email</label>
+                            <input type="email" name="cust_email" id="cust_email" />
+                        </div>
+                        <div class="field">
+                            <label for="cust_address">Address</label>
+                            <input type="text" name="cust_address" id="cust_address" />
+                        </div>
+                    </div>
 
-                <!-- Sales Master -->
-                <article id="salesmaster">
-                    <h3 class="major">Sales Master</h3>
-                    <section>
-                    {{#blockquote data}}{{/blockquote}}
+                    <h4 class="major">Product Details</h4>
+                    <div class="fields">
+                        <div class="field">
+                            <label for="prod_name">Description</label>
+                            <input type="text" name="prod_name" id="prod_name" />
+                        </div>
+                        <div class="field half">
+                            <input type="checkbox" id="prod_face" name="prod_face" checked="checked">
+                            <label for="prod_face">Face</label>
+                        </div>
+                        <div class="field half">
+                            <input type="checkbox" id="prod_quote" name="prod_quote">
+                            <label for="prod_quote">Quote</label>
+                        </div>
+                        <div class="field third">
+                            <label for="prod_qty">Quantity</label>
+                            <input type="number" name="prod_qty" id="prod_qty" />
+                        </div>
+                        <div class="field third">
+                            <label for="prod_price">Price</label>
+                            <input type="number" name="prod_price" id="prod_price" />
+                        </div>
+                        <div class="field third">
+                            <label for="prod_disc">Discount</label>
+                            <input type="number" name="prod_disc" id="prod_disc" />
+                        </div>
+                    </div>
+
+                    <h4 class="major">Other Details</h4>
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="date">Date</label>
+                            <input type="date" name="date" id="dateDefault" value="{{defaultDate}}" />
+                        </div>
+                        <div class="field half" style="margin-top: 20px">
+                            <input type="checkbox" id="delivery" name="delivery" checked="checked">
+                            <label for="delivery">Delivery</label>
+                        </div>
+                        <div class="field half">
+                            <input type="radio" id="open_order" name="order_status" checked="checked" value="open">
+                            <label for="open_order">Open</label>
+                        </div>
+                        <div class="field half">
+                            <input type="radio" id="completed_order" name="order_status" value="complete">
+                            <label for="completed_order">Complete</label>
+                        </div>
+                        <div class="field half">
+                            <label for="payment_mode">Payment Mode</label>
+                            <select name="payment_mode" id="payment_mode">
+                                <option value="">-</option>
+                                <option value="gpay_or_upi">GPay / UPI</option>
+                                <option value="paytm">PayTM</option>
+                                <option value="cash">Cash</option>
+                                <option value="bank_transfer">Bank Transfer</option>
+                            </select>
+                        </div>
+                        <div class="field half">
+                            <label for="entered_by">Entered by</label>
+                            <select name="entered_by" id="entered_by">
+                                <option value="">-</option>
+                                <option value="Dishika">Dishika</option>
+                                <option value="Shalaka">Shalaka</option>
+                                <option value="Rohan">Rohan</option>
+                                <option value="Ritesh">Ritesh</option>
+                                <option value="Sapnil">Sapnil</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="notes">Additional Notes</label>
+                            <textarea name="notes" id="notes" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <ul class="actions">
+                        <li><input type="submit" value="Submit" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
+            </article>
+
+            <!-- Sales Master -->
+            <article id="salesmaster">
+                <h3 class="major">Sales Master</h3>
+                <section>
+                    {{#blockquote completeOrders}}{{/blockquote}}
                 </section>
-                </article>
+            </article>
 
-                <!-- Open Orders -->
-                <article id="openorders">
-                        <h3 class="major">Open Orders</h3>
-                        <section>
-                        
-                    </section>
-                    </article>
+            <!-- Open Orders -->
+            <article id="openorders">
+                <h3 class="major">Open Orders</h3>
+                <section>
 
-                <!-- Success -->
-                <article id="success">
-                    <h4 class="major">Sales Entry Added</h4>
-                    <a href="#" class="button fas fa-check" style="margin-bottom: 20px">Okay</a>
-                </article>
+                </section>
+            </article>
 
-                <!-- Elements -->
-                <article id="elements">
-                    <h2 class="major">Elements</h2>
+            <!-- Success -->
+            <article id="success">
+                <h4 class="major">Sales Entry Added</h4>
+                <a href="#" class="button fas fa-check" style="margin-bottom: 20px">Okay</a>
+            </article>
 
-                    <section>
-                        <h3 class="major">Text</h3>
-                        <p>This is
-                            <b>bold</b>
-                            and this is
-                            <strong>strong</strong>. This is
-                            <i>italic</i>
-                            and this is
-                            <em>emphasized</em>. This is
-                            <sup>superscript</sup>
-                            text and this is
-                            <sub>subscript</sub>
-                            text. This is
-                            <u>underlined</u>
-                            and this is code:
-                            <code>for (;;) { ... }</code>. Finally,
-                            <a href="#">this is a link</a>.</p>
-                        <hr/>
-                        <h2>Heading Level 2</h2>
-                        <h3>Heading Level 3</h3>
-                        <h4>Heading Level 4</h4>
-                        <h5>Heading Level 5</h5>
-                        <h6>Heading Level 6</h6>
-                        <hr/>
-                        <h4>Blockquote</h4>
-                        <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
-                            sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus
-                            vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan
-                            faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet
-                            nullam adipiscing eu felis.</blockquote>
-                        <h4>Preformatted</h4>
-                        <pre><code>i = 0;
+            <!-- Elements -->
+            <article id="elements">
+                <h2 class="major">Elements</h2>
+
+                <section>
+                    <h3 class="major">Text</h3>
+                    <p>This is
+                        <b>bold</b>
+                        and this is
+                        <strong>strong</strong>. This is
+                        <i>italic</i>
+                        and this is
+                        <em>emphasized</em>. This is
+                        <sup>superscript</sup>
+                        text and this is
+                        <sub>subscript</sub>
+                        text. This is
+                        <u>underlined</u>
+                        and this is code:
+                        <code>for (;;) { ... }</code>. Finally,
+                        <a href="#">this is a link</a>.</p>
+                    <hr />
+                    <h2>Heading Level 2</h2>
+                    <h3>Heading Level 3</h3>
+                    <h4>Heading Level 4</h4>
+                    <h5>Heading Level 5</h5>
+                    <h6>Heading Level 6</h6>
+                    <hr />
+                    <h4>Blockquote</h4>
+                    <blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
+                        sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus
+                        vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan
+                        faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet
+                        nullam adipiscing eu felis.</blockquote>
+                    <h4>Preformatted</h4>
+                    <pre><code>i = 0;
 
 while (!deck.isinorder()) {
     print 'iteration ' + i;
@@ -248,288 +250,277 @@ while (!deck.isinorder()) {
 }
 
 print 'it took ' + i + ' iterations to sort the deck.';</code></pre>
-                    </section>
+                </section>
 
-                    <section>
-                        <h3 class="major">Lists</h3>
+                <section>
+                    <h3 class="major">Lists</h3>
 
-                        <h4>Unordered</h4>
-                        <ul>
-                            <li>Dolor pulvinar etiam.</li>
-                            <li>Sagittis adipiscing.</li>
-                            <li>Felis enim feugiat.</li>
-                        </ul>
+                    <h4>Unordered</h4>
+                    <ul>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis adipiscing.</li>
+                        <li>Felis enim feugiat.</li>
+                    </ul>
 
-                        <h4>Alternate</h4>
-                        <ul class="alt">
-                            <li>Dolor pulvinar etiam.</li>
-                            <li>Sagittis adipiscing.</li>
-                            <li>Felis enim feugiat.</li>
-                        </ul>
+                    <h4>Alternate</h4>
+                    <ul class="alt">
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Sagittis adipiscing.</li>
+                        <li>Felis enim feugiat.</li>
+                    </ul>
 
-                        <h4>Ordered</h4>
-                        <ol>
-                            <li>Dolor pulvinar etiam.</li>
-                            <li>Etiam vel felis viverra.</li>
-                            <li>Felis enim feugiat.</li>
-                            <li>Dolor pulvinar etiam.</li>
-                            <li>Etiam vel felis lorem.</li>
-                            <li>Felis enim et feugiat.</li>
-                        </ol>
-                        <h4>Icons</h4>
-                        <ul class="icons">
-                            <li>
-                                <a href="#" class="fas fa-twitter">
-                                    <span class="label">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fas fa-facebook">
-                                    <span class="label">Facebook</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fas fa-instagram">
-                                    <span class="label">Instagram</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fas fa-github">
-                                    <span class="label">Github</span></a>
-                            </li>
-                        </ul>
+                    <h4>Ordered</h4>
+                    <ol>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Etiam vel felis viverra.</li>
+                        <li>Felis enim feugiat.</li>
+                        <li>Dolor pulvinar etiam.</li>
+                        <li>Etiam vel felis lorem.</li>
+                        <li>Felis enim et feugiat.</li>
+                    </ol>
+                    <h4>Icons</h4>
+                    <ul class="icons">
+                        <li>
+                            <a href="#" class="fas fa-twitter">
+                                <span class="label">Twitter</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fas fa-facebook">
+                                <span class="label">Facebook</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fas fa-instagram">
+                                <span class="label">Instagram</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="fas fa-github">
+                                <span class="label">Github</span></a>
+                        </li>
+                    </ul>
 
-                        <h4>Actions</h4>
-                        <ul class="actions">
-                            <li>
-                                <a href="#" class="button primary">Default</a>
-                            </li>
-                            <li>
-                                <a href="#" class="button">Default</a>
-                            </li>
-                        </ul>
-                        <ul class="actions stacked">
-                            <li>
-                                <a href="#" class="button primary">Default</a>
-                            </li>
-                            <li>
-                                <a href="#" class="button">Default</a>
-                            </li>
-                        </ul>
-                    </section>
+                    <h4>Actions</h4>
+                    <ul class="actions">
+                        <li>
+                            <a href="#" class="button primary">Default</a>
+                        </li>
+                        <li>
+                            <a href="#" class="button">Default</a>
+                        </li>
+                    </ul>
+                    <ul class="actions stacked">
+                        <li>
+                            <a href="#" class="button primary">Default</a>
+                        </li>
+                        <li>
+                            <a href="#" class="button">Default</a>
+                        </li>
+                    </ul>
+                </section>
 
-                    <section>
-                        <h3 class="major">Table</h3>
-                        <h4>Default</h4>
-                        <div class="table-wrapper">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Item One</td>
-                                        <td>Ante turpis integer aliquet porttitor.</td>
-                                        <td>29.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Two</td>
-                                        <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                        <td>19.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Three</td>
-                                        <td>
-                                            Morbi faucibus arcu accumsan lorem.</td>
-                                        <td>29.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Four</td>
-                                        <td>Vitae integer tempus condimentum.</td>
-                                        <td>19.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Five</td>
-                                        <td>Ante turpis integer aliquet porttitor.</td>
-                                        <td>29.99</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="2"></td>
-                                        <td>100.00</td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                <section>
+                    <h3 class="major">Table</h3>
+                    <h4>Default</h4>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item One</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                    <td>
+                                        Morbi faucibus arcu accumsan lorem.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Four</td>
+                                    <td>Vitae integer tempus condimentum.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Five</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
 
-                        <h4>Alternate</h4>
-                        <div class="table-wrapper">
-                            <table class="alt">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Item One</td>
-                                        <td>Ante turpis integer aliquet porttitor.</td>
-                                        <td>29.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Two</td>
-                                        <td>Vis ac commodo adipiscing arcu aliquet.</td>
-                                        <td>19.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Three</td>
-                                        <td>
-                                            Morbi faucibus arcu accumsan lorem.</td>
-                                        <td>29.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Four</td>
-                                        <td>Vitae integer tempus condimentum.</td>
-                                        <td>19.99</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Item Five</td>
-                                        <td>Ante turpis integer aliquet porttitor.</td>
-                                        <td>29.99</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="2"></td>
-                                        <td>100.00</td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </section>
+                    <h4>Alternate</h4>
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Item One</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Two</td>
+                                    <td>Vis ac commodo adipiscing arcu aliquet.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Three</td>
+                                    <td>
+                                        Morbi faucibus arcu accumsan lorem.</td>
+                                    <td>29.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Four</td>
+                                    <td>Vitae integer tempus condimentum.</td>
+                                    <td>19.99</td>
+                                </tr>
+                                <tr>
+                                    <td>Item Five</td>
+                                    <td>Ante turpis integer aliquet porttitor.</td>
+                                    <td>29.99</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td>100.00</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
 
-                    <section>
-                        <h3 class="major">Buttons</h3>
-                        <ul class="actions">
-                            <li>
-                                <a href="#" class="button primary">Primary</a>
-                            </li>
-                            <li>
-                                <a href="#" class="button">Default</a>
-                            </li>
-                        </ul>
-                        <ul class="actions">
-                            <li>
-                                <a href="#" class="button">Default</a>
-                            </li>
-                            <li>
-                                <a href="#" class="button small">Small</a>
-                            </li>
-                        </ul>
-                        <ul class="actions">
-                            <li>
-                                <a href="#" class="button primary fas fa-download">Icon</a>
-                            </li>
-                            <li>
-                                <a href="#" class="button fas fa-download">Icon</a>
-                            </li>
-                        </ul>
-                        <ul class="actions">
-                            <li>
-                                <span class="button primary disabled">Disabled</span></li>
-                            <li>
-                                <span class="button disabled">Disabled</span></li>
-                        </ul>
-                    </section>
+                <section>
+                    <h3 class="major">Buttons</h3>
+                    <ul class="actions">
+                        <li>
+                            <a href="#" class="button primary">Primary</a>
+                        </li>
+                        <li>
+                            <a href="#" class="button">Default</a>
+                        </li>
+                    </ul>
+                    <ul class="actions">
+                        <li>
+                            <a href="#" class="button">Default</a>
+                        </li>
+                        <li>
+                            <a href="#" class="button small">Small</a>
+                        </li>
+                    </ul>
+                    <ul class="actions">
+                        <li>
+                            <a href="#" class="button primary fas fa-download">Icon</a>
+                        </li>
+                        <li>
+                            <a href="#" class="button fas fa-download">Icon</a>
+                        </li>
+                    </ul>
+                    <ul class="actions">
+                        <li>
+                            <span class="button primary disabled">Disabled</span></li>
+                        <li>
+                            <span class="button disabled">Disabled</span></li>
+                    </ul>
+                </section>
 
-                    <section>
-                        <h3 class="major">Form</h3>
-                        <form method="post" action="#">
-                            <div class="fields">
-                                <div class="field half">
-                                    <label for="demo-name">Name</label>
-                                    <input
-                                        type="text"
-                                        name="demo-name"
-                                        id="demo-name"
-                                        value=""
-                                        placeholder="Jane Doe"/>
-                                </div>
-                                <div class="field half">
-                                    <label for="demo-email">Email</label>
-                                    <input
-                                        type="email"
-                                        name="demo-email"
-                                        id="demo-email"
-                                        value=""
-                                        placeholder="jane@untitled.tld"/>
-                                </div>
-                                <div class="field">
-                                    <label for="demo-category">Category</label>
-                                    <select name="demo-category" id="demo-category">
-                                        <option value="">-</option>
-                                        <option value="1">Manufacturing</option>
-                                        <option value="1">Shipping</option>
-                                        <option value="1">Administration</option>
-                                        <option value="1">Human Resources</option>
-                                    </select>
-                                </div>
-                                <div class="field half">
-                                    <input type="radio" id="open_order" name="order_status" checked="checked">
-                                    <label for="open_order">Open</label>
-                                </div>
-                                <div class="field half">
-                                    <input type="radio" id="completed_order" name="order_status">
-                                    <label for="completed_order">Complete</label>
-                                </div>
-                                <div class="field half">
-                                    <input type="checkbox" id="demo-copy" name="demo-copy">
-                                    <label for="demo-copy">Email me a copy</label>
-                                </div>
-                                <div class="field half">
-                                    <input type="checkbox" id="demo-human" name="demo-human" checked="checked">
-                                    <label for="demo-human">Not a robot</label>
-                                </div>
-                                <div class="field">
-                                    <label for="demo-message">Message</label>
-                                    <textarea
-                                        name="demo-message"
-                                        id="demo-message"
-                                        placeholder="Enter your message"
-                                        rows="6"></textarea>
-                                </div>
+                <section>
+                    <h3 class="major">Form</h3>
+                    <form method="post" action="#">
+                        <div class="fields">
+                            <div class="field half">
+                                <label for="demo-name">Name</label>
+                                <input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
                             </div>
-                            <ul class="actions">
-                                <li><input type="submit" value="Send Message" class="primary"/></li>
-                                <li><input type="reset" value="Reset"/></li>
-                            </ul>
-                        </form>
-                    </section>
+                            <div class="field half">
+                                <label for="demo-email">Email</label>
+                                <input type="email" name="demo-email" id="demo-email" value=""
+                                    placeholder="jane@untitled.tld" />
+                            </div>
+                            <div class="field">
+                                <label for="demo-category">Category</label>
+                                <select name="demo-category" id="demo-category">
+                                    <option value="">-</option>
+                                    <option value="1">Manufacturing</option>
+                                    <option value="1">Shipping</option>
+                                    <option value="1">Administration</option>
+                                    <option value="1">Human Resources</option>
+                                </select>
+                            </div>
+                            <div class="field half">
+                                <input type="radio" id="open_order" name="order_status" checked="checked">
+                                <label for="open_order">Open</label>
+                            </div>
+                            <div class="field half">
+                                <input type="radio" id="completed_order" name="order_status">
+                                <label for="completed_order">Complete</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="demo-copy" name="demo-copy">
+                                <label for="demo-copy">Email me a copy</label>
+                            </div>
+                            <div class="field half">
+                                <input type="checkbox" id="demo-human" name="demo-human" checked="checked">
+                                <label for="demo-human">Not a robot</label>
+                            </div>
+                            <div class="field">
+                                <label for="demo-message">Message</label>
+                                <textarea name="demo-message" id="demo-message" placeholder="Enter your message"
+                                    rows="6"></textarea>
+                            </div>
+                        </div>
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                            <li><input type="reset" value="Reset" /></li>
+                        </ul>
+                    </form>
+                </section>
 
-                </article>
-
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright">&copy; 2019 The Terrarium Story Company.</p>
-            </footer>
+            </article>
 
         </div>
 
-        <!-- BG -->
-        <div id="bg"></div>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright">&copy; 2019 The Terrarium Story Company.</p>
+        </footer>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+    </div>
 
-    </body>
+    <!-- BG -->
+    <div id="bg"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>

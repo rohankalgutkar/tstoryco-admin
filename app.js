@@ -1,39 +1,51 @@
 const express = require('express');
 const basicAuth = require('express-basic-auth')
-// const path = require('path');
-const bodyParser = require('body-parser');
-var customAPIs = require('./custom')
-// temp
-const mongoose = require('./mongoose.js')
+const bodyParser = require('body-parser')
+const _ = require('lodash')
 
-const hbs = require('hbs');
+var customAPIs = require('./custom')
+
+const hbs = require('hbs')
 
 const app = express()
 app.use(basicAuth({
-  users: { 'admin': 'supersecret' },
-  challenge: true
+    users: {
+        'admin': 'supersecret'
+    },
+    challenge: true
 }))
 
 
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 
-hbs.registerHelper('blockquote', function (data, options) {
-    return customAPIs.generateSalesOutput(data);
+hbs.registerHelper('blockquote', function (completeOrders, options) {
+    return customAPIs.generateSalesOutput(completeOrders);
 });
 
 app.get('/', function (req, res) {
 
-    var salesMaster = mongoose.Sale;
-    salesMaster.find({}).sort({date_added: -1}).exec((err, docs) => {
-        if (err) {
-            console.log('Unable to connect to the DB!')
-        } else {
-            res.render('index', {data: docs,
-              defaultDate: customAPIs.getTodaysDate()});
-        }
+    var defaultDate = customAPIs.getTodaysDate();
+    var salesData = customAPIs.getAllSales();
+
+    salesData.then((salesData) => {
+
+
+        res.render('index', {
+            completeOrders: _.filter(salesData, function (o) {
+                return o.order_status == 'complete';
+            }),
+            // openOrders: _.filter(salesData, function (o) {
+            //     return o.order_status == 'open';
+            // }),
+            defaultDate
+        });
+    }).catch((e) => {
+        console.log('Didnt work' + e);
     });
 });
 
