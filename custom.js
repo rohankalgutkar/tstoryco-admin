@@ -140,11 +140,27 @@ var getTodaysDate = function () {
     return output;
 };
 
+var getDashDetails = function (salesData) {
+
+    var cost = 0,
+        discount = 0;
+    _.each(salesData, (objSale) => {
+        cost = cost + objSale.prod_price;
+        discount = discount + objSale.prod_disc
+    });
+    cost = cost - discount;
+
+    return {
+        cost,
+        discount
+    }
+}
 module.exports = {
     preProcessSalesData,
     insertSale,
     getAllSales,
     formatDate,
     generateSalesOutput,
-    getTodaysDate
+    getTodaysDate,
+    getDashDetails
 }

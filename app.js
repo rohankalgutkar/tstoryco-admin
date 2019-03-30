@@ -37,28 +37,24 @@ app.get('/', function (req, res) {
     var salesData = customAPIs.getAllSales();
 
     salesData.then((salesData) => {
-        var cost = 0,
-            // earning = 0,
-            discount = 0;
-        _.each(salesData, (objSale) => {
-            cost = cost + objSale.prod_price;
-            // earning = earning + objSale.grand_total
-            discount = discount + objSale.prod_disc
+        var dashDetails = customAPIs.getDashDetails(salesData);
+        var completeOrders = _.filter(salesData, function (o) {
+            return o.order_status == 'complete';
         });
-        cost = cost - discount;
-        console.log('Earning:' + cost);
-        console.log('discount:' + discount);
+        var openOrders = _.filter(salesData, function (o) {
+            return o.order_status == 'open';
+        });
+
+
 
         res.render('index', {
-            completeOrders: _.filter(salesData, function (o) {
-                return o.order_status == 'complete';
-            }),
-            openOrders: _.filter(salesData, function (o) {
-                return o.order_status == 'open';
-            }),
+            completeOrders,
+            completeCount: completeOrders.length,
+            openOrders,
+            openCount: openOrders.length,
             defaultDate,
-            cost,
-            discount
+            cost: dashDetails.cost,
+            discount: dashDetails.discount
         });
     }).catch((e) => {
         console.log('Didnt work' + e);

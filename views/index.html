@@ -66,6 +66,11 @@
                     <h5>Discount</h5>
                     <h1>₹{{ discount}}</h1>
                 </section>
+
+                <!-- <section>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                    <canvas id="myChart2" width="400" height="400"></canvas>
+                </section> -->
             </article>
 
             <!-- Sales Entry -->
@@ -174,7 +179,7 @@
 
             <!-- Sales Master -->
             <article id="salesmaster">
-                <h3 class="major">Sales Master</h3>
+                <h3 class="major">Sales Master ({{completeCount}})</h3>
                 <section>
                     {{#completeBlockquote completeOrders}}{{/completeBlockquote}}
                 </section>
@@ -182,7 +187,7 @@
 
             <!-- Open Orders -->
             <article id="openorders">
-                <h3 class="major">Open Orders</h3>
+                <h3 class="major">Open Orders ({{openCount}})</h3>
                 <section>
                     {{#openBlockquote openOrders}}{{/openBlockquote}}
                 </section>
@@ -196,7 +201,7 @@
 
             <!-- Elements -->
 
-            <article id="elements">
+            <!-- <article id="elements">
                 <h2 class="major">Elements</h2>
 
                 <section>
@@ -489,7 +494,7 @@ print 'it took ' + i + ' iterations to sort the deck.';</code></pre>
                     </form>
                 </section>
 
-            </article>
+            </article> -->
 
         </div>
 
@@ -509,6 +514,63 @@ print 'it took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar'],
+                datasets: [{
+                    fill: false,
+                    label: 'Count',
+                    data: [12, 19, 8],
+                    backgroundColor: ['#3498db', '#3498db', '#3498db'],
+                    borderColor: ['#3498db'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    <script>
+        var ctx = document.getElementById('myChart2');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb'],
+                datasets: [{
+                    fill: false,
+                    label: 'Count',
+                    data: [0, 12],
+                    backgroundColor: ['#2ecc71', '#2ecc71', '#2ecc71'],
+                    borderColor: ['#2ecc71'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script> -->
 
 </body>
 
