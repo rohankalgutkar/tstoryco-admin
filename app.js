@@ -23,8 +23,12 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'html');
 app.engine('html', require('hbs').__express);
 
-hbs.registerHelper('blockquote', function (completeOrders, options) {
+hbs.registerHelper('completeBlockquote', function (completeOrders) {
     return customAPIs.generateSalesOutput(completeOrders);
+});
+
+hbs.registerHelper('openBlockquote', function (openOrders) {
+    return customAPIs.generateSalesOutput(openOrders);
 });
 
 app.get('/', function (req, res) {
@@ -39,9 +43,9 @@ app.get('/', function (req, res) {
             completeOrders: _.filter(salesData, function (o) {
                 return o.order_status == 'complete';
             }),
-            // openOrders: _.filter(salesData, function (o) {
-            //     return o.order_status == 'open';
-            // }),
+            openOrders: _.filter(salesData, function (o) {
+                return o.order_status == 'open';
+            }),
             defaultDate
         });
     }).catch((e) => {

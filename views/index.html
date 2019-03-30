@@ -39,9 +39,9 @@
                     <li>
                         <a href="#salesmaster">View Sales</a>
                     </li>
-                    <!--<li>
-                            <a href="#openorders">Open Orders</a>
-                        </li>-->
+                    <li>
+                        <a href="#openorders">Open Orders</a>
+                    </li>
                     <!-- <li>
                             <a href="#success">Success</a>
                         </li>  -->
@@ -188,7 +188,7 @@
             <article id="salesmaster">
                 <h3 class="major">Sales Master</h3>
                 <section>
-                    {{#blockquote completeOrders}}{{/blockquote}}
+                    {{#completeBlockquote completeOrders}}{{/completeBlockquote}}
                 </section>
             </article>
 
@@ -196,7 +196,7 @@
             <article id="openorders">
                 <h3 class="major">Open Orders</h3>
                 <section>
-
+                    {{#openBlockquote openOrders}}{{/openBlockquote}}
                 </section>
             </article>
 

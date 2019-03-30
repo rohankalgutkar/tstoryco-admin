@@ -45,7 +45,6 @@ var getAllSales = function () {
 
 var generateSalesOutput = function (data) {
     var output = "";
-    console.log('Dataset: ' + data)
     console.log('Dataset length: ' + data.length)
 
     for (var i = 0, l = data.length; i < l; i++) {
@@ -98,7 +97,6 @@ var generateSalesOutput = function (data) {
             '</li></ul> </blockquote>'
     }
 
-    console.log('returning shiz' + output);
     return output
 }
 
